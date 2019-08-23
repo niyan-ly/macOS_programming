@@ -27,6 +27,7 @@ class TableViewController: NSViewController, NSTableViewDataSource, NSTableViewD
         }
         
         vw.textField?.stringValue = Util.folderContents[row]
+        vw.imageView?.image = NSImage(named: "NSFolder")
         return vw
     }
 }

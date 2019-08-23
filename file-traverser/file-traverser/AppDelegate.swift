@@ -7,18 +7,33 @@
 //
 
 import Cocoa
+import CoreGraphics
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var tableView: NSTableView?
+    @IBOutlet weak var tableView: NSTableView!
+    @IBOutlet weak var widthField: NSTextField!
+    @IBOutlet weak var heightField: NSTextField!
+    @IBOutlet weak var positionX: NSTextField!
+    @IBOutlet weak var positionY: NSTextField!
+    
     var dialog: NSOpenPanel?
     var folderContents: [String] = []
 
-
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+    }
+    
+    func windowDidResize(_ notification: Notification) {
+        widthField.stringValue = window.frame.width.description
+        heightField.stringValue = window.frame.height.description
+    }
+    
+    func windowDidMove(_ notification: Notification) {
+        positionX.stringValue = window.frame.origin.x.description
+        positionY.stringValue = window.frame.origin.y.description
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -28,6 +43,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         
         return true
+    }
+    
+    @IBAction func resizeWindow(_ sender: NSButton) {
+        guard let wantedWidth = Double(widthField.stringValue) else {
+            return
+        }
+        
+        guard let wantedHeight = Double(heightField.stringValue) else {
+            return
+        }
+
+        let newOrigin = CGPoint(x: window.frame.origin.x, y: window.frame.origin.y + window.frame.height - CGFloat(wantedHeight))
+//        print(wantedHeight)
+        let newFrame = window.frameRect(forContentRect: NSRect(origin: newOrigin, size: CGSize(width: wantedWidth, height: wantedHeight - 22)))
+//        print(CGSize(width: wantedWidth, height: wantedHeight).height.description)
+        window.setFrame(newFrame, display: true, animate: true)
     }
     
     @IBAction func openDocument(_ sender: Any) {
