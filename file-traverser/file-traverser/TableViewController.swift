@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Quartz
 
 class TableViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
 
@@ -29,6 +30,18 @@ class TableViewController: NSViewController, NSTableViewDataSource, NSTableViewD
         vw.textField?.stringValue = Util.folderContents[row].name
         vw.imageView?.image = Util.folderContents[row].icon
         return vw
+    }
+    
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if tableView.isEqual(to: notification.object) {
+            guard let sharedQLPanel = QLPreviewPanel.shared() else {
+                return
+            }
+            
+            if QLPreviewPanel.sharedPreviewPanelExists() && sharedQLPanel.isVisible {
+                sharedQLPanel.reloadData()
+            }
+        }
     }
     
 //    func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {

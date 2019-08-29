@@ -11,7 +11,7 @@ import CoreGraphics
 import Quartz
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSSplitViewDelegate, QuickLookTableDelegate, QLPreviewPanelDataSource {
+class AppDelegate: NSObject, NSApplicationDelegate, NSSplitViewDelegate, QuickLookTableDelegate, QLPreviewPanelDataSource, QLPreviewPanelDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var tableView: NSTableView!
 
@@ -29,23 +29,37 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSSplitViewDelegate, QuickLo
         return true
     }
     
+    func previewPanel(_ panel: QLPreviewPanel!, handle event: NSEvent!) -> Bool {
+        if event.type == .keyDown {
+            tableView.keyDown(with: event)
+            return true
+        }
+        
+        return false
+    }
+    
     override func beginPreviewPanelControl(_ panel: QLPreviewPanel!) {
         panel.dataSource = self
+        panel.delegate = self
     }
     
     override func endPreviewPanelControl(_ panel: QLPreviewPanel!) {
         panel.dataSource = nil
+        panel.delegate = nil
     }
     
     func didPressSpaceBarForTableView(_ sender: NSView) {
+        guard tableView.selectedRow > 0 else {
+            return
+        }
         guard let sharedQLPanel = QLPreviewPanel.shared() else {
             return
         }
         
         if QLPreviewPanel.sharedPreviewPanelExists() && sharedQLPanel.isVisible {
-            sharedQLPanel.orderOut(self)
+            sharedQLPanel.animator().orderOut(self)
         } else {
-            sharedQLPanel.makeKeyAndOrderFront(self)
+            sharedQLPanel.animator().makeKeyAndOrderFront(self)
             sharedQLPanel.reloadData()
         }
     }
