@@ -25,9 +25,13 @@ class TableViewController: NSViewController, NSTableViewDataSource, NSTableViewD
         guard let vw = tableView.makeView(withIdentifier: tableColumn!.identifier, owner: self) as? NSTableCellView else {
             return nil
         }
-        
-        vw.textField?.stringValue = Util.folderContents[row]
-        vw.imageView?.image = NSImage(named: "NSFolder")
+
+        vw.textField?.stringValue = Util.folderContents[row].name
+        vw.imageView?.image = Util.folderContents[row].icon
         return vw
     }
+    
+//    func tableView(_ tableView: NSTableView, validateDrop info: NSDraggingInfo, proposedRow row: Int, proposedDropOperation dropOperation: NSTableView.DropOperation) -> NSDragOperation {
+//        <#code#>
+//    }
 }

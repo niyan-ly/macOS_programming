@@ -8,57 +8,59 @@
 
 import Cocoa
 import CoreGraphics
+import Quartz
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
-
+class AppDelegate: NSObject, NSApplicationDelegate, NSSplitViewDelegate, QuickLookTableDelegate, QLPreviewPanelDataSource {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var tableView: NSTableView!
-    @IBOutlet weak var widthField: NSTextField!
-    @IBOutlet weak var heightField: NSTextField!
-    @IBOutlet weak var positionX: NSTextField!
-    @IBOutlet weak var positionY: NSTextField!
-    
+
     var dialog: NSOpenPanel?
-    var folderContents: [String] = []
+    
+    func numberOfPreviewItems(in panel: QLPreviewPanel!) -> Int {
+        return tableView.selectedRowIndexes.count
+    }
+    
+    func previewPanel(_ panel: QLPreviewPanel!, previewItemAt index: Int) -> QLPreviewItem! {
+        return Util.folderContents[tableView.selectedRow].url as QLPreviewItem
+    }
+    
+    override func acceptsPreviewPanelControl(_ panel: QLPreviewPanel!) -> Bool {
+        return true
+    }
+    
+    override func beginPreviewPanelControl(_ panel: QLPreviewPanel!) {
+        panel.dataSource = self
+    }
+    
+    override func endPreviewPanelControl(_ panel: QLPreviewPanel!) {
+        panel.dataSource = nil
+    }
+    
+    func didPressSpaceBarForTableView(_ sender: NSView) {
+        guard let sharedQLPanel = QLPreviewPanel.shared() else {
+            return
+        }
+        
+        if QLPreviewPanel.sharedPreviewPanelExists() && sharedQLPanel.isVisible {
+            sharedQLPanel.orderOut(self)
+        } else {
+            sharedQLPanel.makeKeyAndOrderFront(self)
+            sharedQLPanel.reloadData()
+        }
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
-    }
-    
-    func windowDidResize(_ notification: Notification) {
-        widthField.stringValue = window.frame.width.description
-        heightField.stringValue = window.frame.height.description
-    }
-    
-    func windowDidMove(_ notification: Notification) {
-        positionX.stringValue = window.frame.origin.x.description
-        positionY.stringValue = window.frame.origin.y.description
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-        
-        return true
-    }
     
-    @IBAction func resizeWindow(_ sender: NSButton) {
-        guard let wantedWidth = Double(widthField.stringValue) else {
-            return
-        }
-        
-        guard let wantedHeight = Double(heightField.stringValue) else {
-            return
-        }
-
-        let newOrigin = CGPoint(x: window.frame.origin.x, y: window.frame.origin.y + window.frame.height - CGFloat(wantedHeight))
-//        print(wantedHeight)
-        let newFrame = window.frameRect(forContentRect: NSRect(origin: newOrigin, size: CGSize(width: wantedWidth, height: wantedHeight - 22)))
-//        print(CGSize(width: wantedWidth, height: wantedHeight).height.description)
-        window.setFrame(newFrame, display: true, animate: true)
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        window.makeKeyAndOrderFront(self)
+        return true
     }
     
     @IBAction func openDocument(_ sender: Any) {
@@ -82,6 +84,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
             Util.folderContents = folderList ?? []
             self.tableView?.reloadData()
         })
+    }
+    
+    func splitView(_ splitView: NSSplitView, constrainMinCoordinate proposedMinimumPosition: CGFloat, ofSubviewAt dividerIndex: Int) -> CGFloat {
+        return proposedMinimumPosition + 200
+    }
+    
+    func splitView(_ splitView: NSSplitView, constrainMaxCoordinate proposedMaximumPosition: CGFloat, ofSubviewAt dividerIndex: Int) -> CGFloat {
+        return proposedMaximumPosition - 120
     }
 }
 

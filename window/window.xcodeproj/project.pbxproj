@@ -7,120 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DB22A8E3230E9AB20025614D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22A8E2230E9AB20025614D /* AppDelegate.swift */; };
-		DB22A8E5230E9AB30025614D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB22A8E4230E9AB30025614D /* Assets.xcassets */; };
-		DB22A8E8230E9AB30025614D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB22A8E6230E9AB30025614D /* MainMenu.xib */; };
-		DB22A8F1230E9B9B0025614D /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22A8F0230E9B9B0025614D /* TableViewController.swift */; };
-		DB22A8F3230EA2AF0025614D /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB22A8F2230EA2AF0025614D /* Util.swift */; };
-		DBC831212317F84200B95BC3 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC8311F2317E84400B95BC3 /* Quartz.framework */; };
-		DBC831222317F95600B95BC3 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC831012317B8BD00B95BC3 /* QuickLook.framework */; };
-		DBC831242317FAD700B95BC3 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC831232317FAD700B95BC3 /* TableView.swift */; };
+		DBC831122317D97B00B95BC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC831112317D97B00B95BC3 /* AppDelegate.swift */; };
+		DBC831142317D97C00B95BC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC831132317D97C00B95BC3 /* Assets.xcassets */; };
+		DBC831172317D97C00B95BC3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBC831152317D97C00B95BC3 /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DB22A8DF230E9AB20025614D /* file-traverser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "file-traverser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB22A8E2230E9AB20025614D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DB22A8E4230E9AB30025614D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DB22A8E7230E9AB30025614D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		DB22A8E9230E9AB30025614D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB22A8EA230E9AB30025614D /* file_traverser.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = file_traverser.entitlements; sourceTree = "<group>"; };
-		DB22A8F0230E9B9B0025614D /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		DB22A8F2230EA2AF0025614D /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
-		DBC831012317B8BD00B95BC3 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
-		DBC8311F2317E84400B95BC3 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
-		DBC831232317FAD700B95BC3 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		DBC8310E2317D97B00B95BC3 /* window.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = window.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC831112317D97B00B95BC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DBC831132317D97C00B95BC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC831162317D97C00B95BC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DBC831182317D97C00B95BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBC831192317D97C00B95BC3 /* window.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = window.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DB22A8DC230E9AB20025614D /* Frameworks */ = {
+		DBC8310B2317D97B00B95BC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBC831222317F95600B95BC3 /* QuickLook.framework in Frameworks */,
-				DBC831212317F84200B95BC3 /* Quartz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DB22A8D6230E9AB20025614D = {
+		DBC831052317D97B00B95BC3 = {
 			isa = PBXGroup;
 			children = (
-				DB22A8E1230E9AB20025614D /* file-traverser */,
-				DB22A8E0230E9AB20025614D /* Products */,
-				DBC831002317B8BD00B95BC3 /* Frameworks */,
+				DBC831102317D97B00B95BC3 /* window */,
+				DBC8310F2317D97B00B95BC3 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DB22A8E0230E9AB20025614D /* Products */ = {
+		DBC8310F2317D97B00B95BC3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DB22A8DF230E9AB20025614D /* file-traverser.app */,
+				DBC8310E2317D97B00B95BC3 /* window.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DB22A8E1230E9AB20025614D /* file-traverser */ = {
+		DBC831102317D97B00B95BC3 /* window */ = {
 			isa = PBXGroup;
 			children = (
-				DB22A8E2230E9AB20025614D /* AppDelegate.swift */,
-				DB22A8E4230E9AB30025614D /* Assets.xcassets */,
-				DB22A8E6230E9AB30025614D /* MainMenu.xib */,
-				DB22A8F0230E9B9B0025614D /* TableViewController.swift */,
-				DBC831232317FAD700B95BC3 /* TableView.swift */,
-				DB22A8F2230EA2AF0025614D /* Util.swift */,
-				DB22A8E9230E9AB30025614D /* Info.plist */,
-				DB22A8EA230E9AB30025614D /* file_traverser.entitlements */,
+				DBC831112317D97B00B95BC3 /* AppDelegate.swift */,
+				DBC831132317D97C00B95BC3 /* Assets.xcassets */,
+				DBC831152317D97C00B95BC3 /* MainMenu.xib */,
+				DBC831182317D97C00B95BC3 /* Info.plist */,
+				DBC831192317D97C00B95BC3 /* window.entitlements */,
 			);
-			path = "file-traverser";
-			sourceTree = "<group>";
-		};
-		DBC831002317B8BD00B95BC3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				DBC8311F2317E84400B95BC3 /* Quartz.framework */,
-				DBC831012317B8BD00B95BC3 /* QuickLook.framework */,
-			);
-			name = Frameworks;
+			path = window;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DB22A8DE230E9AB20025614D /* file-traverser */ = {
+		DBC8310D2317D97B00B95BC3 /* window */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DB22A8ED230E9AB30025614D /* Build configuration list for PBXNativeTarget "file-traverser" */;
+			buildConfigurationList = DBC8311C2317D97C00B95BC3 /* Build configuration list for PBXNativeTarget "window" */;
 			buildPhases = (
-				DB22A8DB230E9AB20025614D /* Sources */,
-				DB22A8DC230E9AB20025614D /* Frameworks */,
-				DB22A8DD230E9AB20025614D /* Resources */,
+				DBC8310A2317D97B00B95BC3 /* Sources */,
+				DBC8310B2317D97B00B95BC3 /* Frameworks */,
+				DBC8310C2317D97B00B95BC3 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "file-traverser";
-			productName = "file-traverser";
-			productReference = DB22A8DF230E9AB20025614D /* file-traverser.app */;
+			name = window;
+			productName = window;
+			productReference = DBC8310E2317D97B00B95BC3 /* window.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DB22A8D7230E9AB20025614D /* Project object */ = {
+		DBC831062317D97B00B95BC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = nuc_mac;
 				TargetAttributes = {
-					DB22A8DE230E9AB20025614D = {
+					DBC8310D2317D97B00B95BC3 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 				};
 			};
-			buildConfigurationList = DB22A8DA230E9AB20025614D /* Build configuration list for PBXProject "file-traverser" */;
+			buildConfigurationList = DBC831092317D97B00B95BC3 /* Build configuration list for PBXProject "window" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,47 +103,44 @@
 				en,
 				Base,
 			);
-			mainGroup = DB22A8D6230E9AB20025614D;
-			productRefGroup = DB22A8E0230E9AB20025614D /* Products */;
+			mainGroup = DBC831052317D97B00B95BC3;
+			productRefGroup = DBC8310F2317D97B00B95BC3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DB22A8DE230E9AB20025614D /* file-traverser */,
+				DBC8310D2317D97B00B95BC3 /* window */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DB22A8DD230E9AB20025614D /* Resources */ = {
+		DBC8310C2317D97B00B95BC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB22A8E5230E9AB30025614D /* Assets.xcassets in Resources */,
-				DB22A8E8230E9AB30025614D /* MainMenu.xib in Resources */,
+				DBC831142317D97C00B95BC3 /* Assets.xcassets in Resources */,
+				DBC831172317D97C00B95BC3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DB22A8DB230E9AB20025614D /* Sources */ = {
+		DBC8310A2317D97B00B95BC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB22A8E3230E9AB20025614D /* AppDelegate.swift in Sources */,
-				DBC831242317FAD700B95BC3 /* TableView.swift in Sources */,
-				DB22A8F3230EA2AF0025614D /* Util.swift in Sources */,
-				DB22A8F1230E9B9B0025614D /* TableViewController.swift in Sources */,
+				DBC831122317D97B00B95BC3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DB22A8E6230E9AB30025614D /* MainMenu.xib */ = {
+		DBC831152317D97C00B95BC3 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				DB22A8E7230E9AB30025614D /* Base */,
+				DBC831162317D97C00B95BC3 /* Base */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -176,7 +148,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		DB22A8EB230E9AB30025614D /* Debug */ = {
+		DBC8311A2317D97C00B95BC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +180,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -237,7 +209,7 @@
 			};
 			name = Debug;
 		};
-		DB22A8EC230E9AB30025614D /* Release */ = {
+		DBC8311B2317D97C00B95BC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,7 +241,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -291,39 +263,37 @@
 			};
 			name = Release;
 		};
-		DB22A8EE230E9AB30025614D /* Debug */ = {
+		DBC8311D2317D97C00B95BC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "file-traverser/file_traverser.entitlements";
+				CODE_SIGN_ENTITLEMENTS = window/window.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CM2YAVDH6V;
-				INFOPLIST_FILE = "file-traverser/Info.plist";
+				INFOPLIST_FILE = window/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "poor-branson.file-traverser";
+				PRODUCT_BUNDLE_IDENTIFIER = "poor-branson.window";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		DB22A8EF230E9AB30025614D /* Release */ = {
+		DBC8311E2317D97C00B95BC3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "file-traverser/file_traverser.entitlements";
+				CODE_SIGN_ENTITLEMENTS = window/window.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = CM2YAVDH6V;
-				INFOPLIST_FILE = "file-traverser/Info.plist";
+				INFOPLIST_FILE = window/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "poor-branson.file-traverser";
+				PRODUCT_BUNDLE_IDENTIFIER = "poor-branson.window";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -332,25 +302,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DB22A8DA230E9AB20025614D /* Build configuration list for PBXProject "file-traverser" */ = {
+		DBC831092317D97B00B95BC3 /* Build configuration list for PBXProject "window" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB22A8EB230E9AB30025614D /* Debug */,
-				DB22A8EC230E9AB30025614D /* Release */,
+				DBC8311A2317D97C00B95BC3 /* Debug */,
+				DBC8311B2317D97C00B95BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DB22A8ED230E9AB30025614D /* Build configuration list for PBXNativeTarget "file-traverser" */ = {
+		DBC8311C2317D97C00B95BC3 /* Build configuration list for PBXNativeTarget "window" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DB22A8EE230E9AB30025614D /* Debug */,
-				DB22A8EF230E9AB30025614D /* Release */,
+				DBC8311D2317D97C00B95BC3 /* Debug */,
+				DBC8311E2317D97C00B95BC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DB22A8D7230E9AB20025614D /* Project object */;
+	rootObject = DBC831062317D97B00B95BC3 /* Project object */;
 }
