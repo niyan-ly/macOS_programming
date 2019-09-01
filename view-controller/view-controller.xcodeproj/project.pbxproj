@@ -10,10 +10,10 @@
 		DB90944D231A6E2800A0AF40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90944C231A6E2800A0AF40 /* AppDelegate.swift */; };
 		DB90944F231A6E2900A0AF40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB90944E231A6E2900A0AF40 /* Assets.xcassets */; };
 		DB909452231A6E2900A0AF40 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB909450231A6E2900A0AF40 /* MainMenu.xib */; };
-		DB90945C231A6E5C00A0AF40 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90945A231A6E5C00A0AF40 /* FirstViewController.swift */; };
-		DB90945D231A6E5C00A0AF40 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB90945B231A6E5C00A0AF40 /* FirstViewController.xib */; };
-		DB909460231A6E6A00A0AF40 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90945E231A6E6A00A0AF40 /* SecondViewController.swift */; };
-		DB909461231A6E6A00A0AF40 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB90945F231A6E6A00A0AF40 /* SecondViewController.xib */; };
+		DB90945C231A6E5C00A0AF40 /* PreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90945A231A6E5C00A0AF40 /* PreferenceController.swift */; };
+		DB90945D231A6E5C00A0AF40 /* PreferenceController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB90945B231A6E5C00A0AF40 /* PreferenceController.xib */; };
+		DB909460231A6E6A00A0AF40 /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB90945E231A6E6A00A0AF40 /* InfoController.swift */; };
+		DB909461231A6E6A00A0AF40 /* InfoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB90945F231A6E6A00A0AF40 /* InfoController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +23,10 @@
 		DB909451231A6E2900A0AF40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DB909453231A6E2900A0AF40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB909454231A6E2900A0AF40 /* view_controller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = view_controller.entitlements; sourceTree = "<group>"; };
-		DB90945A231A6E5C00A0AF40 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		DB90945B231A6E5C00A0AF40 /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		DB90945E231A6E6A00A0AF40 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		DB90945F231A6E6A00A0AF40 /* SecondViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		DB90945A231A6E5C00A0AF40 /* PreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceController.swift; sourceTree = "<group>"; };
+		DB90945B231A6E5C00A0AF40 /* PreferenceController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreferenceController.xib; sourceTree = "<group>"; };
+		DB90945E231A6E6A00A0AF40 /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		DB90945F231A6E6A00A0AF40 /* InfoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +62,10 @@
 				DB90944C231A6E2800A0AF40 /* AppDelegate.swift */,
 				DB90944E231A6E2900A0AF40 /* Assets.xcassets */,
 				DB909450231A6E2900A0AF40 /* MainMenu.xib */,
-				DB90945A231A6E5C00A0AF40 /* FirstViewController.swift */,
-				DB90945B231A6E5C00A0AF40 /* FirstViewController.xib */,
-				DB90945E231A6E6A00A0AF40 /* SecondViewController.swift */,
-				DB90945F231A6E6A00A0AF40 /* SecondViewController.xib */,
+				DB90945A231A6E5C00A0AF40 /* PreferenceController.swift */,
+				DB90945B231A6E5C00A0AF40 /* PreferenceController.xib */,
+				DB90945E231A6E6A00A0AF40 /* InfoController.swift */,
+				DB90945F231A6E6A00A0AF40 /* InfoController.xib */,
 				DB909453231A6E2900A0AF40 /* Info.plist */,
 				DB909454231A6E2900A0AF40 /* view_controller.entitlements */,
 			);
@@ -130,9 +130,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB909461231A6E6A00A0AF40 /* SecondViewController.xib in Resources */,
+				DB909461231A6E6A00A0AF40 /* InfoController.xib in Resources */,
 				DB90944F231A6E2900A0AF40 /* Assets.xcassets in Resources */,
-				DB90945D231A6E5C00A0AF40 /* FirstViewController.xib in Resources */,
+				DB90945D231A6E5C00A0AF40 /* PreferenceController.xib in Resources */,
 				DB909452231A6E2900A0AF40 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,9 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB909460231A6E6A00A0AF40 /* SecondViewController.swift in Sources */,
+				DB909460231A6E6A00A0AF40 /* InfoController.swift in Sources */,
 				DB90944D231A6E2800A0AF40 /* AppDelegate.swift in Sources */,
-				DB90945C231A6E5C00A0AF40 /* FirstViewController.swift in Sources */,
+				DB90945C231A6E5C00A0AF40 /* PreferenceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

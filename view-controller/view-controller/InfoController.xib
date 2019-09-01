@@ -17,9 +17,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Kl-nM-J34">
-                    <rect key="frame" x="271" y="223" width="99" height="34"/>
+                    <rect key="frame" x="295" y="223" width="52" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Second" id="QWZ-7I-eIR">
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Info" id="QWZ-7I-eIR">
                         <font key="font" metaFont="system" size="28"/>
                         <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

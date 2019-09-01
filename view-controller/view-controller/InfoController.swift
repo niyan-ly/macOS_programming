@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class SecondViewController: NSViewController, InitialViewSize {
+class InfoController: NSViewController, InitialViewSize {
     var width: CGFloat!
     var height: CGFloat!
 

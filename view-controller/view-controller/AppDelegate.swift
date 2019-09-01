@@ -26,8 +26,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var toolBar: NSToolbar!
-    var firstViewController: InitialViewSize?
-    var secondViewController: InitialViewSize?
+    var preferenceController: InitialViewSize?
+    var infoController: InitialViewSize?
     var usedViewController: InitialViewSize?
     
     @IBAction func onPreferenceView(_ sender: NSButton) {
@@ -45,9 +45,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate {
         
         switch viewIndex {
         case .first:
-            usedViewController = firstViewController
+            usedViewController = preferenceController
         case .second:
-            usedViewController = secondViewController
+            usedViewController = infoController
         }
         
         window.contentView = usedViewController?.view
@@ -64,8 +64,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSToolbarDelegate {
     
     override func awakeFromNib() {
         toolBar.selectedItemIdentifier = NSToolbarItem.Identifier("Preference")
-        firstViewController = FirstViewController(nibName: "FirstViewController", bundle: nil)
-        secondViewController = SecondViewController(nibName: "SecondViewController", bundle: nil)
+        preferenceController = PreferenceController(nibName: "PreferenceController", bundle: nil)
+        infoController = InfoController(nibName: "InfoController", bundle: nil)
         changeView(of: .first)
     }
     

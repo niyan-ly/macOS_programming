@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class FirstViewController: NSViewController, InitialViewSize {
+class PreferenceController: NSViewController, InitialViewSize {
     var width: CGFloat!
     var height: CGFloat!
 
