@@ -22,6 +22,8 @@
 
 ![](./assets/window_coordinate_2x.png)
 
+[More Detail](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/CocoaDrawingGuide/Transforms/Transforms.html)
+
 #### Calculation
 
 to keep the topLeft point of the frame of window in position while resizing, recalculation of both the origin and content size is needed.
