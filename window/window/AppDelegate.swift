@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
     @IBOutlet weak var heightField: NSTextField!
     @IBOutlet weak var positionX: NSTextField!
     @IBOutlet weak var positionY: NSTextField!
+    
+    @objc dynamic var temperature = 48
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -49,6 +51,14 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSWindowDelegate {
         let newFrame = window.frameRect(forContentRect: NSRect(origin: newOrigin, size: CGSize(width: wantedWidth, height: wantedHeight - 22)))
         //        print(CGSize(width: wantedWidth, height: wantedHeight).height.description)
         window.setFrame(newFrame, display: true, animate: true)
+    }
+    
+    @IBAction func downTemperature(_ sender: Any) {
+        temperature -= 5
+    }
+    
+    @IBAction func upTemperature(_ sender: Any) {
+        temperature += 5
     }
 }
 
