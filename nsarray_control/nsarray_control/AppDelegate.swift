@@ -12,11 +12,7 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
-    @objc dynamic var employees: [DataModel] = [] {
-        didSet {
-            print(self.employees[0].name)
-        }
-    }
+    @objc dynamic var employees: [DataModel] = []
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application

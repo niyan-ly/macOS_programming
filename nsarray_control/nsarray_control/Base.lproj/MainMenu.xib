@@ -818,6 +818,7 @@
                         </buttonCell>
                         <connections>
                             <action selector="remove:" target="LFY-E9-oe3" id="Oa1-Gk-W6O"/>
+                            <binding destination="LFY-E9-oe3" name="enabled" keyPath="canRemove" id="gv0-h7-b7O"/>
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2s4-mE-0s1">
