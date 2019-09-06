@@ -773,19 +773,43 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aKf-JJ-KgZ">
-                        <rect key="frame" x="32" y="51" width="81" height="32"/>
-                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vjQ-te-Nrm">
+                        <rect key="frame" x="32" y="51" width="97" height="32"/>
+                        <buttonCell key="cell" type="push" title="DOWN" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="vjQ-te-Nrm">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="downTemperature" target="Voe-Tx-rLC" id="npa-GX-5Vc"/>
+                        </connections>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DzD-Np-LTv">
-                        <rect key="frame" x="346" y="51" width="81" height="32"/>
-                        <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U59-zW-apf">
+                        <rect key="frame" x="354" y="51" width="73" height="32"/>
+                        <buttonCell key="cell" type="push" title="UP" bezelStyle="rounded" image="NSGoForwardTemplate" imagePosition="left" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="U59-zW-apf">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="upTemperature" target="Voe-Tx-rLC" id="EHs-Fp-9W1"/>
+                        </connections>
                     </button>
+                    <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="61o-vu-bMz">
+                        <rect key="frame" x="18" y="97" width="444" height="19"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="100" doubleValue="50" tickMarkPosition="above" sliderType="linear" id="QH5-XH-rYE"/>
+                        <connections>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="temperature" id="ga8-Rc-P8W"/>
+                        </connections>
+                    </slider>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="n9l-cq-Htk">
+                        <rect key="frame" x="214" y="122" width="37" height="17"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="Nbg-uq-wbp">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                        <connections>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="temperature" id="FEM-Ur-vQA"/>
+                        </connections>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="llL-Lp-GvB" firstAttribute="leading" secondItem="k5z-SC-IBk" secondAttribute="trailing" constant="8" symbolic="YES" id="0KJ-0E-WZT"/>
@@ -795,18 +819,24 @@
                     <constraint firstItem="DzD-Np-LTv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aKf-JJ-KgZ" secondAttribute="trailing" constant="64" id="KxP-NE-aAG"/>
                     <constraint firstItem="zsT-eX-L1r" firstAttribute="firstBaseline" secondItem="34p-4h-Fwd" secondAttribute="firstBaseline" id="NSX-Gt-pZZ"/>
                     <constraint firstItem="7fO-tJ-bKe" firstAttribute="firstBaseline" secondItem="k5z-SC-IBk" secondAttribute="firstBaseline" id="RuV-kn-eGx"/>
+                    <constraint firstAttribute="bottom" secondItem="61o-vu-bMz" secondAttribute="bottom" constant="99" id="TB1-dO-lQc"/>
                     <constraint firstItem="zsT-eX-L1r" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="13" id="TTv-yW-eWB"/>
+                    <constraint firstItem="n9l-cq-Htk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="216" id="UM3-xS-OfC"/>
                     <constraint firstItem="34p-4h-Fwd" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="9" id="Xs8-3H-YZc"/>
                     <constraint firstItem="k5z-SC-IBk" firstAttribute="top" secondItem="EtA-lE-1TS" secondAttribute="bottom" constant="43" id="YHn-6z-NUi"/>
                     <constraint firstItem="aKf-JJ-KgZ" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="38" id="Zwb-bR-89e"/>
                     <constraint firstItem="xtz-WC-Sod" firstAttribute="firstBaseline" secondItem="k5z-SC-IBk" secondAttribute="firstBaseline" id="bul-0k-1kK"/>
+                    <constraint firstItem="61o-vu-bMz" firstAttribute="top" secondItem="n9l-cq-Htk" secondAttribute="bottom" constant="8" id="fJ7-fg-g7p"/>
                     <constraint firstAttribute="trailing" secondItem="DzD-Np-LTv" secondAttribute="trailing" constant="59" id="fKF-tn-2D2"/>
                     <constraint firstAttribute="bottom" secondItem="aKf-JJ-KgZ" secondAttribute="bottom" constant="58" id="fWI-Kc-MbS"/>
+                    <constraint firstAttribute="trailing" secondItem="61o-vu-bMz" secondAttribute="trailing" constant="20" symbolic="YES" id="hf2-nf-sMi"/>
                     <constraint firstItem="gl9-hW-FTG" firstAttribute="firstBaseline" secondItem="EtA-lE-1TS" secondAttribute="firstBaseline" id="iHP-e9-a4q"/>
                     <constraint firstItem="34p-4h-Fwd" firstAttribute="leading" secondItem="gl9-hW-FTG" secondAttribute="trailing" priority="750" constant="130" id="kze-Yy-fb5"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n9l-cq-Htk" secondAttribute="trailing" constant="231" id="nje-8G-ylp"/>
                     <constraint firstItem="EtA-lE-1TS" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="9" id="rTt-Nc-M1q"/>
                     <constraint firstAttribute="bottom" secondItem="DzD-Np-LTv" secondAttribute="bottom" constant="58" id="rdf-Xh-Hem"/>
                     <constraint firstItem="EtA-lE-1TS" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="26" id="sWD-ch-uoo"/>
+                    <constraint firstItem="61o-vu-bMz" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="wNa-sE-HY0"/>
                     <constraint firstItem="7fO-tJ-bKe" firstAttribute="leading" secondItem="llL-Lp-GvB" secondAttribute="trailing" constant="43" id="z5p-SB-Y6Q"/>
                     <constraint firstItem="k5z-SC-IBk" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="zhH-ra-1mt"/>
                     <constraint firstItem="zsT-eX-L1r" firstAttribute="leading" secondItem="34p-4h-Fwd" secondAttribute="trailing" constant="8" symbolic="YES" id="zs3-Ce-bHl"/>
@@ -818,4 +848,8 @@
             <point key="canvasLocation" x="139" y="-150"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
+        <image name="NSGoForwardTemplate" width="9" height="12"/>
+    </resources>
 </document>
