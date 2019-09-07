@@ -9,11 +9,7 @@
 import Cocoa
 
 class DataModel: NSObject {
-    @objc dynamic var name: String = "name" {
-        didSet {
-            print(self.name)
-        }
-    }
+    @objc dynamic var name: String = "name"
     @objc dynamic var raise: Float = 0.3
     
     override func setNilValueForKey(_ key: String) {

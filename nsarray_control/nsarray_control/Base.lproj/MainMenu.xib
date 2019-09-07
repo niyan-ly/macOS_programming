@@ -713,6 +713,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="name.length"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="QAW-xK-VpL">
@@ -749,6 +750,7 @@
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <sortDescriptor key="sortDescriptorPrototype" selector="compare:" sortKey="raise"/>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
                                                 <tableCellView id="0hH-Kh-SpF">
@@ -767,7 +769,7 @@
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                             </textFieldCell>
                                                             <connections>
-                                                                <binding destination="0hH-Kh-SpF" name="value" keyPath="objectValue.raise" id="yvJ-W2-yXg"/>
+                                                                <binding destination="0hH-Kh-SpF" name="value" keyPath="objectValue.raise" id="hMu-ZI-2JS"/>
                                                             </connections>
                                                         </textField>
                                                     </subviews>
@@ -781,6 +783,7 @@
                                     <connections>
                                         <binding destination="LFY-E9-oe3" name="content" keyPath="arrangedObjects" id="fK6-zX-euG"/>
                                         <binding destination="LFY-E9-oe3" name="selectionIndexes" keyPath="selectionIndexes" previousBinding="fK6-zX-euG" id="WzS-3e-TL4"/>
+                                        <binding destination="LFY-E9-oe3" name="sortDescriptors" keyPath="sortDescriptors" previousBinding="WzS-3e-TL4" id="wAA-De-j8e"/>
                                     </connections>
                                 </tableView>
                             </subviews>
@@ -819,17 +822,6 @@
                         <connections>
                             <action selector="remove:" target="LFY-E9-oe3" id="Oa1-Gk-W6O"/>
                             <binding destination="LFY-E9-oe3" name="enabled" keyPath="canRemove" id="gv0-h7-b7O"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2s4-mE-0s1">
-                        <rect key="frame" x="479" y="246" width="68" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="push" title="print" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uVk-j5-OO6">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="printEmployee:" target="Voe-Tx-rLC" id="I41-sh-wPL"/>
                         </connections>
                     </button>
                 </subviews>
